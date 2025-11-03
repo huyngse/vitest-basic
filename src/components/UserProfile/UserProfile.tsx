@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import type { UserProfileProps } from "./types";
-import type { User } from "../../types";
-import { fetchUser } from "../../api/usersAPI";
 import styles from "./UserProfile.module.css";
+import type { User } from "@/types";
+import { fetchUser } from "@/api/usersAPI";
 
 const UserProfile = ({ id }: UserProfileProps) => {
   const [user, setUser] = useState<User>();
