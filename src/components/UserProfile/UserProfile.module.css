@@ -1,0 +1,49 @@
+.spinnerContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 2rem;
+}
+
+.spinnerContainer span {
+  width: 5rem;
+  height: 5rem;
+  border: 1rem solid lightgray;
+  border-top: 1rem solid skyblue;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.spinnerContainer p {
+  margin-top: 0.5rem;
+}
+
+.userProfile {
+  text-align: center;
+}
+
+.userProfile h2 {
+  font-size: large;
+  font-weight: bold;
+}
+
+.userProfile p {
+  text-decoration: underline;
+  color: darkgray;
+}
+
+.errorMessage {
+  padding-block: 2rem;
+  color: red;
+  text-align: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
