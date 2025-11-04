@@ -5,8 +5,8 @@ const Counter = () => {
 
   return (
     <div className={styles.counterContainer}>
-      <p>{count}</p>
-      <button onClick={() => setCount((prev) => prev + 1)}>Increase</button>
+      <p data-testid="count">{count}</p>
+      <button onClick={() => setCount((prev) => prev + 1)} data-testid="increase-button">Increase</button>
     </div>
   );
 };
