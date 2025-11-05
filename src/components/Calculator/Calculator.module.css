@@ -1,0 +1,44 @@
+.calculator {
+  width: 30rem;
+  background-color: lightgrey;
+  padding: 0.2rem;
+  border-radius: 0.1rem;
+}
+
+.equation {
+  text-align: end;
+  font-size: x-large;
+  padding-block: 0.5rem;
+}
+
+.result {
+    text-align: end;
+    font-size: x-large;
+    font-weight: bold;
+    padding-block: 0.5rem;
+}
+
+.buttonsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.2rem;
+}
+
+.buttonsContainer button {
+    padding-block: 1rem;
+    font-size: large;
+}
+
+.resultButton {
+    background-color: lightblue;
+    border-width: 0.05rem;
+    border-radius: 0.2rem;
+}
+
+.resultButton:hover {
+    background-color: rgb(149, 185, 197);
+}
+
+.resultButton:active {
+    background-color: rgb(123, 153, 164);
+}

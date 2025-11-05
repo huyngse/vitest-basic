@@ -11,6 +11,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "expr-eval": "^2.0.2",
     "path": "^0.12.7",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
