@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./Calculator.module.css";
-import { Parser } from "expr-eval";
+import { evaluate } from "mathjs";
 
 const Calculator = () => {
   const [equation, setEquation] = useState("");
@@ -17,8 +17,7 @@ const Calculator = () => {
     } else if (value === "=") {
       try {
         const sanitized = equation.replace(/×/g, "*").replace(/÷/, "/");
-        const parser = new Parser();
-        const evalResult = parser.evaluate(sanitized || "0");
+        const evalResult = evaluate(sanitized || "0");
         setResult(evalResult.toString());
       } catch (err) {
         if (err instanceof Error) {
@@ -62,8 +61,12 @@ const Calculator = () => {
   ];
   return (
     <div className={styles.calculator}>
-      <p className={styles.equation} data-testid="equation">{equation || "0"}</p>
-      <p className={styles.result} data-testid="result">Result: {result}</p>
+      <p className={styles.equation} data-testid="equation">
+        {equation || "0"}
+      </p>
+      <p className={styles.result} data-testid="result">
+        Result: {result}
+      </p>
       <div className={styles.buttonsContainer}>
         {buttons.map((btn) => (
           <button

@@ -71,7 +71,7 @@ describe("Calculator component", () => {
     fireEvent.click(screen.getByTestId("button-÷"));
     fireEvent.click(screen.getByTestId("button-="));
     expect(screen.getByTestId("result")).toHaveTextContent(
-      /Result: unexpected/i
+      /Result: Value expected/i
     );
   });
 });

@@ -30,10 +30,10 @@ describe("BarChart Component", () => {
   });
 
   it("sets proportional bar heights", () => {
-    const { getByTestId } = render(<BarChart data={sampleData} height={200} />);
-    const bar0 = getByTestId("bar-0") as HTMLElement;
-    const bar1 = getByTestId("bar-1") as HTMLElement;
-    const bar2 = getByTestId("bar-2") as HTMLElement;
+    render(<BarChart data={sampleData} height={200} />);
+    const bar0 = screen.getByTestId("bar-0") as HTMLElement;
+    const bar1 = screen.getByTestId("bar-1") as HTMLElement;
+    const bar2 = screen.getByTestId("bar-2") as HTMLElement;
 
     const h0 = parseFloat(bar0.style.height);
     const h1 = parseFloat(bar1.style.height);
@@ -46,10 +46,8 @@ describe("BarChart Component", () => {
   it("applies custom width and height props correctly", () => {
     const width = 500;
     const height = 300;
-    const { getByTestId } = render(
-      <BarChart data={sampleData} width={width} height={height} />
-    );
-    const chartArea = getByTestId("bar-chart-area");
+    render(<BarChart data={sampleData} width={width} height={height} />);
+    const chartArea = screen.getByTestId("bar-chart-area");
 
     expect(chartArea).toHaveStyle(`width: ${width}px`);
     expect(chartArea).toHaveStyle(`height: ${height}px`);
