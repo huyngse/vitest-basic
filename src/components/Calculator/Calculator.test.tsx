@@ -66,7 +66,7 @@ describe("Calculator component", () => {
     expect(screen.getByTestId("equation")).toHaveTextContent("8");
   });
 
-  it("handles invalid input gracefully", () => {
+  it("handles invalid input safely", () => {
     render(<Calculator />);
     fireEvent.click(screen.getByTestId("button-÷"));
     fireEvent.click(screen.getByTestId("button-="));

@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+}
+
+.ticks {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.tick {
+  display: flex;
+  align-items: center;
+  width: 30px;
+}
+
+.tickLabel {
+  text-align: right;
+  flex: 1;
+}
+
+.tickLine {
+  width: 8px;
+  height: 1px;
+  background: #333;
+  margin-left: 4px;
+}
+
+.chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  border-left: 2px solid #333;
+  border-bottom: 2px solid #333;
+  padding: 8px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+.barContainer {
+  text-align: center;
+  flex: 1;
+}
+
+.bar {
+  background-color: aqua;
+  transition: height 0.3s ease;
+}
+
+.barLabel {
+  margin-top: 4px;
+  font-size: 12px;
+}
