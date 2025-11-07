@@ -1,10 +1,4 @@
-import BarChart from "./components/BarChart/BarChart";
-
-const data = [
-  { label: "Apples", value: 10 },
-  { label: "Oranges", value: 15 },
-  { label: "Bananas", value: 27 },
-];
+import QuadraticCalculator from "./components/QuadraticCalculator/QuadraticCalculator";
 
 function App() {
   return (
@@ -13,10 +7,10 @@ function App() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        minHeight: "100vh"
+        minHeight: "100vh",
       }}
     >
-      <BarChart data={data} width={800} height={600} />
+      <QuadraticCalculator />
     </div>
   );
 }
